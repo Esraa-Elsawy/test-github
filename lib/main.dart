@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:graduation_project/Screens/home_page.dart';
+import 'package:graduation_project/Welcome_Screen.dart';
+import 'package:graduation_project/login.dart';
+import 'package:graduation_project/signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +18,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Home(),
+        //initialRoute: WelcomeScreen.id,
+        routes: {
+          WelcomeScreen.id: (context) => WelcomeScreen(),
+          Login.id: (context) => Login(),
+          SignUpPage.id: (context) => SignUpPage(),
+        }
     );
   }
 }
